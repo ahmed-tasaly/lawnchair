@@ -11,7 +11,6 @@ github_ref = os.getenv("GITHUB_REF")
 
 telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
 telegram_ci_channel_id = os.getenv("TELEGRAM_CI_CHANNEL_ID")
-telegram_team_group_id = os.getenv("TELEGRAM_TEAM_GROUP_ID")
 telegram_news_channel_id = os.getenv("TELEGRAM_NEWS_CHANNEL_ID")
 
 artifact_directory = os.getenv("ARTIFACT_DIRECTORY")
@@ -45,6 +44,8 @@ def send_internal_notifications():
     commit_range = f"{github_event_before}...{github_sha}"
     commits = list(repository.iter_commits(commit_range))
 
+    if len(commits) == 0: return
+
     overview_link = f"https://github.com/{github_repository}/compare/{commit_range}"
     overview_link_tag = f"""<a href="{overview_link}">{len(commits)} new commit{"s" if len(commits) > 1 else ""}</a>"""
     message = f"""<b>🔨 {overview_link_tag} to <code>lawnchair:{github_ref}</code>:</b>\n"""
@@ -57,7 +58,6 @@ def send_internal_notifications():
         message += f"\n• {commit_link_tag}: {encoded_message}"
 
     send_message_to_telegram_chat(chat_id=telegram_ci_channel_id, message=message, silent=False)
-    send_message_to_telegram_chat(chat_id=telegram_team_group_id, message=message, silent=True)
     send_artifact_to_telegram_chat(chat_id=telegram_ci_channel_id)
 
 def send_update_announcement():
