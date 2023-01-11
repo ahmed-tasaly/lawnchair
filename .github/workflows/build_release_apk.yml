@@ -63,7 +63,7 @@ jobs:
         with:
           name: Release APK
           path: artifacts/release-apk
-      - #name: Send notifications
+      #- name: Send notifications
         #run: python ci.py
         #env:
           #GITHUB_EVENT_BEFORE: ${{ github.event.before }}
