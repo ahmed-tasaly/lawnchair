@@ -2,12 +2,12 @@ import com.android.build.gradle.BasePlugin
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id 'com.android.application' version "7.4.0-rc03"
-    id 'com.android.library' version "7.4.0-rc03" apply false
-    id 'org.jetbrains.kotlin.android' version "1.7.20"
-    id 'org.jetbrains.kotlin.plugin.parcelize' version "1.7.20"
-    id 'org.jetbrains.kotlin.plugin.serialization' version "1.7.20"
-    id "com.google.devtools.ksp" version "1.7.20-1.0.8"
+    id 'com.android.application' version "7.4.0"
+    id 'com.android.library' version "7.4.0" apply false
+    id 'org.jetbrains.kotlin.android' version "1.8.0"
+    id 'org.jetbrains.kotlin.plugin.parcelize' version "1.8.0"
+    id 'org.jetbrains.kotlin.plugin.serialization' version "1.8.0"
+    id "com.google.devtools.ksp" version "1.8.0-1.0.8"
     id 'com.google.protobuf' version "0.9.1"
     id 'com.google.android.gms.oss-licenses-plugin' version "0.10.6"
     id 'dev.rikka.tools.refine' version "3.1.1"
@@ -21,7 +21,6 @@ allprojects {
                 minSdk 26
                 targetSdk 32
                 vectorDrawables.useSupportLibrary = true
-                testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
             }
             compileOptions {
                 sourceCompatibility JavaVersion.VERSION_1_8
@@ -34,15 +33,6 @@ allprojects {
         }
         project.dependencies {
             implementation 'androidx.core:core-ktx:1.9.0'
-
-            testImplementation 'junit:junit:4.13.2'
-            androidTestImplementation 'org.mockito:mockito-core:4.11.0'
-            androidTestImplementation 'com.google.dexmaker:dexmaker:1.2'
-            androidTestImplementation 'com.google.dexmaker:dexmaker-mockito:1.2'
-            androidTestImplementation 'com.android.support.test:runner:1.0.2'
-            androidTestImplementation 'com.android.support.test:rules:1.0.2'
-            androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.3'
-            androidTestImplementation "androidx.annotation:annotation:1.5.0"
         }
     }
 
@@ -101,9 +91,9 @@ allprojects {
 // todo remove ext block after migrating to version catalog
 ext {
     accompanist_version = '0.28.0'
-    libsu_version = '5.0.3'
+    libsu_version = '5.0.4'
     protocVersion = '3.21.12'
-    room_version = '2.4.3'
+    room_version = '2.5.0'
     optoVersion = "1.0.18"
 }
 
@@ -126,10 +116,12 @@ final def quickstepMinSdk = "32"
 final def quickstepMaxSdk = "32"
 
 android {
+    namespace "com.android.launcher3"
     defaultConfig {
         versionCode 12_01_00_05
         versionName "${versionDisplayName}"
         buildConfigField "String", "VERSION_DISPLAY_NAME", "\"${versionDisplayName}\""
+        buildConfigField "String", "COMMIT_HASH", "\"${buildCommit}\""
         buildConfigField "String", "MAJOR_VERSION", "\"${majorVersion}\""
         buildConfigField "String", "COMMIT_HASH", "\"${buildCommit}\""
         buildConfigField "boolean", "ENABLE_AUTO_INSTALLS_LAYOUT", "false"
@@ -147,11 +139,14 @@ android {
     }
 
     buildFeatures {
+        aidl true
+        buildConfig true
         compose true
+        resValues true
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        kotlinCompilerExtensionVersion = "1.4.0"
     }
 
     final def keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -188,10 +183,13 @@ android {
 
     buildTypes {
         debug {
+            applicationIdSuffix ".debug"
+            resValue("string", "derived_app_name", "Lawnchair (Debug)")
             signingConfig releaseSigning
         }
 
         release {
+            resValue("string", "derived_app_name", "Lawnchair")
             signingConfig releaseSigning
             minifyEnabled true
             shrinkResources true
@@ -346,9 +344,9 @@ dependencies {
     implementation 'com.github.ChickenHook:RestrictionBypass:2.2'
     implementation 'dev.rikka.tools.refine:runtime:3.1.1'
 
-    implementation platform("androidx.compose:compose-bom:2022.12.00")
+    implementation platform("androidx.compose:compose-bom:2023.01.00")
     implementation "androidx.compose.ui:ui"
-    implementation "androidx.compose.ui:ui-tooling"
+    debugImplementation "androidx.compose.ui:ui-tooling"
     implementation "androidx.compose.ui:ui-text-google-fonts"
     implementation "androidx.compose.foundation:foundation"
     implementation "androidx.compose.material:material-icons-extended"
