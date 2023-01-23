@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Paketa Ikonave</string>
+    <string name="themed_icon_pack">Themed Icon Source</string>
     <string name="system_icons">Ikonat e Sistemit</string>
     <string name="themed_icon_title">Themed Icons</string>
     <string name="themed_icons_off_label">Fikur</string>
@@ -265,6 +266,7 @@
     <string name="pref_search_auto_show_keyboard">Shfaq Tastierën Automatikisht</string>
     <string name="fuzzy_search_title">Kërkim i përafërt</string>
     <string name="fuzzy_search_desc">Kërkimi me përafërsi për aplikacionet.</string>
+    <string name="max_search_result_count_title">Max Search Result Count</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Kolonat e Sirtarit te Aplikacioneve</string>
     <string name="row_height_label">Gjatësia e Rreshtave</string>
@@ -356,7 +358,6 @@
     <string name="label">Emërtimi</string>
     <string name="hide_from_drawer">Fshih nga Sirtari i Aplikacioneve</string>
     <string name="suggestion_pref_screen_title">Sugjerimet</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Lawnchair Bug Report</string>
     <string name="crash_report_notif_title">%1$s Crashed</string>

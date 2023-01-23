@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Пакет икона</string>
+    <string name="themed_icon_pack">Themed Icon Source</string>
     <string name="system_icons">Системске иконе</string>
     <string name="themed_icon_title">Тематске иконе</string>
     <string name="themed_icons_off_label">Искључено</string>
@@ -265,6 +266,7 @@
     <string name="pref_search_auto_show_keyboard">Аутоматски приказуј тастатуру</string>
     <string name="fuzzy_search_title">Приближна претрага</string>
     <string name="fuzzy_search_desc">Приближни резултати претраге на основу упита.</string>
+    <string name="max_search_result_count_title">Max Search Result Count</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Број колона на листи апликација</string>
     <string name="row_height_label">Висина реда</string>
@@ -357,7 +359,6 @@
     <string name="label">Ознака</string>
     <string name="hide_from_drawer">Сакриј са листе апликација</string>
     <string name="suggestion_pref_screen_title">Предлози</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Извештај о грешци у Lawnchair-у</string>
     <string name="crash_report_notif_title">%1$s је отказао</string>

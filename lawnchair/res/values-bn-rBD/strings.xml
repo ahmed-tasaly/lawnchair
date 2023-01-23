@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">আইকন প্যাক</string>
+    <string name="themed_icon_pack">Themed Icon Source</string>
     <string name="system_icons">সিস্টেম আইকনস</string>
     <string name="themed_icon_title">আবহ অনুযায়ী প্রতীক</string>
     <string name="themed_icons_off_label">Off</string>
@@ -265,6 +266,7 @@
     <string name="pref_search_auto_show_keyboard">স্বয়ংক্রিয়ভাবে কীবোর্ড দেখান</string>
     <string name="fuzzy_search_title">ফাজি সার্চ</string>
     <string name="fuzzy_search_desc">অ্যাপ্লিকেশন সার্চের জন্য আনুমানিক মিল.</string>
+    <string name="max_search_result_count_title">Max Search Result Count</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">অ্যাপ ড্রয়ারের কলাম</string>
     <string name="row_height_label">সারির উচ্চতা</string>
@@ -356,7 +358,6 @@
     <string name="label">নাম</string>
     <string name="hide_from_drawer">অ্যাপ ড্রয়ার থেকে লুকান</string>
     <string name="suggestion_pref_screen_title">পরামর্শ</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Lawnchair বাগ রিপোর্ট</string>
     <string name="crash_report_notif_title">%1$s সমস্যা হয়েছে</string>

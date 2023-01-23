@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Ikoon pakket</string>
+    <string name="themed_icon_pack">Themed Icon Source</string>
     <string name="system_icons">Stelsel ikone</string>
     <string name="themed_icon_title">Tema ikone</string>
     <string name="themed_icons_off_label">Af</string>
@@ -265,6 +266,7 @@
     <string name="pref_search_auto_show_keyboard">Wys sleutelbord outomaties</string>
     <string name="fuzzy_search_title">Fuzzy soektog</string>
     <string name="fuzzy_search_desc">Geskatte passing vir toepassingsoektogte.</string>
+    <string name="max_search_result_count_title">Max Search Result Count</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Programlaaikolomme</string>
     <string name="row_height_label">Ry Hoogte</string>
@@ -356,7 +358,6 @@
     <string name="label">Etiket</string>
     <string name="hide_from_drawer">Versteek uit App-laai</string>
     <string name="suggestion_pref_screen_title">Voorstelle</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Lawnchair Bug Report</string>
     <string name="crash_report_notif_title">%1$s het omgeval</string>

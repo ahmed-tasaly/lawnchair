@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Kuvakepaketti</string>
+    <string name="themed_icon_pack">Themed Icon Source</string>
     <string name="system_icons">Järjestelmäkuvakkeet</string>
     <string name="themed_icon_title">Teemakuvakkeet</string>
     <string name="themed_icons_off_label">Off</string>
@@ -265,6 +266,7 @@
     <string name="pref_search_auto_show_keyboard">Automatically Show Keyboard</string>
     <string name="fuzzy_search_title">Summittainen haku</string>
     <string name="fuzzy_search_desc">Arvioitu vastaavuus sovellushauille.</string>
+    <string name="max_search_result_count_title">Max Search Result Count</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Sovellusvalikon sarakkeet</string>
     <string name="row_height_label">Rivikorkeus</string>
@@ -356,7 +358,6 @@
     <string name="label">Nimike</string>
     <string name="hide_from_drawer">Piilota sovellusvalikosta</string>
     <string name="suggestion_pref_screen_title">Ehdotukset</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Lawnchair Virheraportti</string>
     <string name="crash_report_notif_title">%1$s Kaatui</string>

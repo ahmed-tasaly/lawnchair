@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">ชุดไอคอน</string>
+    <string name="themed_icon_pack">Themed Icon Source</string>
     <string name="system_icons">ไอคอนระบบ</string>
     <string name="themed_icon_title">ไอคอนของธีม</string>
     <string name="themed_icons_off_label">ปิด</string>
@@ -265,6 +266,7 @@
     <string name="pref_search_auto_show_keyboard">แสดงคีย์บอร์ดอัตโนมัติ</string>
     <string name="fuzzy_search_title">Fuzzy Search</string>
     <string name="fuzzy_search_desc">Approximate matching for app searches.</string>
+    <string name="max_search_result_count_title">Max Search Result Count</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">จำนวนคอลัมน์</string>
     <string name="row_height_label">ความสูงของแถว</string>
@@ -355,7 +357,6 @@
     <string name="label">Label</string>
     <string name="hide_from_drawer">ซ่อนจากรายการแอพ</string>
     <string name="suggestion_pref_screen_title">คำแนะนำ</string>
-    <string name="n_percent">%1$d %</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">รายงานข้อผิดพลาดให้กับ Lawnchair</string>
     <string name="crash_report_notif_title">%1$s ทำงานผิดพลาด</string>

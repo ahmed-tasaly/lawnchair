@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Pacchetto icone</string>
+    <string name="themed_icon_pack">Themed Icon Source</string>
     <string name="system_icons">Icone di sistema</string>
     <string name="themed_icon_title">Icone a tema</string>
     <string name="themed_icons_off_label">Disattivate</string>
@@ -265,6 +266,7 @@
     <string name="pref_search_auto_show_keyboard">Mostra la tastiera automaticamente</string>
     <string name="fuzzy_search_title">Ricerca approssimativa</string>
     <string name="fuzzy_search_desc">Mostra risultati simili a ciò che hai digitato nella ricerca delle app.</string>
+    <string name="max_search_result_count_title">Max Search Result Count</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Colonne del menu delle app</string>
     <string name="row_height_label">Altezza riga</string>
@@ -356,7 +358,6 @@
     <string name="label">Etichetta</string>
     <string name="hide_from_drawer">Nascondi dal menu delle app</string>
     <string name="suggestion_pref_screen_title">Suggerimenti</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Segnalazione bug di Lawnchair</string>
     <string name="crash_report_notif_title">%1$s è crashato</string>

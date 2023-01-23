@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">图标包</string>
+    <string name="themed_icon_pack">主题图标来源</string>
     <string name="system_icons">系统图标</string>
     <string name="themed_icon_title">带主题的图标</string>
     <string name="themed_icons_off_label">关闭</string>
@@ -356,7 +357,6 @@
     <string name="label">标签</string>
     <string name="hide_from_drawer">从应用抽屉隐藏</string>
     <string name="suggestion_pref_screen_title">建议</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Lawnchair 错误报告</string>
     <string name="crash_report_notif_title">%1$s 已崩溃</string>
