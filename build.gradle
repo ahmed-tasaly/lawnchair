@@ -3,15 +3,15 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id 'com.android.application' version "7.4.1"
-    id 'com.android.library' version "7.4.1" apply false
+    id 'com.android.application' version "7.4.2"
+    id 'com.android.library' version "7.4.2" apply false
     id 'org.jetbrains.kotlin.android' version "1.8.10"
     id 'org.jetbrains.kotlin.plugin.parcelize' version "1.8.10"
     id 'org.jetbrains.kotlin.plugin.serialization' version "1.8.10"
     id "com.google.devtools.ksp" version "1.8.10-1.0.9"
     id 'com.google.protobuf' version "0.9.1"
     id 'com.google.android.gms.oss-licenses-plugin' version "0.10.6"
-    id 'dev.rikka.tools.refine' version "4.1.0"
+    id 'dev.rikka.tools.refine' version "4.3.0"
 }
 
 allprojects {
@@ -69,10 +69,10 @@ allprojects {
 // todo remove ext block after migrating to version catalog
 ext {
     FRAMEWORK_PREBUILTS_DIR = "$rootDir/prebuilts/libs"
-    accompanist_version = '0.28.0'
-    libsu_version = '5.0.4'
-    protocVersion = '3.21.12'
-    room_version = '2.5.0'
+    accompanist_version = '0.30.0'
+    libsu_version = '5.0.5'
+    protocVersion = '3.22.2'
+    room_version = '2.5.1'
     optoVersion = "1.0.18"
 }
 
@@ -124,7 +124,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.2"
+        kotlinCompilerExtensionVersion = "1.4.4"
     }
 
     final def keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -313,15 +313,15 @@ dependencies {
     withoutQuickstepImplementation fileTree(dir: FRAMEWORK_PREBUILTS_DIR, include: 'plugin_core.jar')
 
     implementation "androidx.dynamicanimation:dynamicanimation:1.0.0"
-    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.recyclerview:recyclerview:1.3.0"
     implementation "androidx.preference:preference-ktx:1.2.0"
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
-    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0-RC'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0'
     implementation 'com.github.ChickenHook:RestrictionBypass:2.2'
-    implementation 'dev.rikka.tools.refine:runtime:4.1.0'
+    implementation 'dev.rikka.tools.refine:runtime:4.3.0'
 
-    implementation platform("androidx.compose:compose-bom:2023.01.00")
+    implementation platform("androidx.compose:compose-bom:2023.03.00")
     implementation "androidx.compose.ui:ui"
     debugImplementation "androidx.compose.ui:ui-tooling"
     implementation "androidx.compose.ui:ui-text-google-fonts"
@@ -329,10 +329,10 @@ dependencies {
     implementation "androidx.compose.material:material-icons-extended"
     implementation "androidx.compose.material:material"
     implementation "androidx.compose.runtime:runtime-livedata"
-    implementation 'androidx.compose.material3:material3:1.1.0-alpha06'
+    implementation 'androidx.compose.material3:material3:1.1.0-beta01'
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
-    implementation "androidx.activity:activity-compose:1.6.1"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+    implementation "androidx.activity:activity-compose:1.7.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1"
     implementation "androidx.navigation:navigation-compose:2.5.3"
     implementation "androidx.palette:palette-ktx:1.0.0"
     implementation "androidx.slice:slice-core:1.1.0-alpha02"
@@ -344,9 +344,9 @@ dependencies {
     implementation "com.google.accompanist:accompanist-placeholder-material:$accompanist_version"
     implementation "com.google.accompanist:accompanist-systemuicontroller:$accompanist_version"
     implementation "com.google.android.material:material:1.8.0"
-    implementation "io.github.fornewid:material-motion-compose-core:0.10.4"
+    implementation "io.github.fornewid:material-motion-compose-core:0.11.1"
     implementation 'dev.kdrag0n:colorkt:1.0.5'
-    implementation 'io.coil-kt:coil-compose:2.2.2'
+    implementation 'io.coil-kt:coil-compose:2.3.0'
     implementation 'me.xdrop:fuzzywuzzy:1.4.0'
     implementation "com.patrykmichalik.opto:domain:$optoVersion"
     implementation "com.patrykmichalik.opto:core:$optoVersion"
@@ -366,9 +366,11 @@ dependencies {
     implementation 'com.github.LawnchairLauncher:oss-notices:1.0.2'
 
     // Persian Date
-    implementation 'com.github.samanzamani:PersianDate:1.5.4'
+    implementation 'com.github.samanzamani:PersianDate:1.6.1'
 
     implementation 'com.airbnb.android:lottie:6.0.0'
+
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:2.10"
 }
 
 ksp {
